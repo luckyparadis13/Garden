@@ -48,4 +48,191 @@ body {
   grid-row: 3;
 }
 
-/*LEVEL 2/*
+/*LEVEL 2*/
+#level-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.peas:nth-of-type(1) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.onions {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.tomatoes {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.lettuce {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.carrots {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/*LEVEL 3*/
+#level-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.peas {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.onions {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.tomatoes {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+.lettuce {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.carrots {
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+/*LEVEL 4*/
+#level-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.peas:nth-of-type(1) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.onions:nth-of-type(1) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.carrots:nth-of-type(1) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.tomatoes {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.lettuce {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.onions:nth-of-type(2) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.carrots:nth-of-type(2) {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+/*LEVEL 5*/
+#level-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.carrots:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.onions:nth-of-type(1) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.lettuce {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.carrots:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.onions:nth-of-type(2) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.peas:nth-of-type(1) {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.peas:nth-of-type(2) {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+.carrots:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.tomatoes {
+  grid-column: 2 / 5;
+  grid-row: 3;
+}
+
+/*LEVEL 6- 
+Goal Summary:Goal Summary:
+	•	Each plot (emoji box) should be:
+	•	At least 5rem wide
+	•	Grow to fill extra space equally within a row (1fr)
+	•	As many plots as possible should fit per row
+	•	Grid should automatically create as many rows as needed
+	•	Each row should be exactly 5rem tall
+
+  Research:
+  -Repeat
+  -Repeat auto-fit
+  -Minmax
+  -Grid-auto-rows
+*/
+
+#level-6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-auto-rows: 5rem;
+  gap: 2px;
+}
+
+/*Explanation:
+	•	Repeat(auto-fit, minmax(5rem, 1fr))
+	•	This says: “fit as many columns as you can, where each column is at least 5rem wide, and can grow to share the available space.”
+	•	Grid-auto-rows: 5rem
+	•	Ensures each new row that gets created is exactly 5rem tall
+	•	Gap: 2px
+	•	Keeps spacing consistent (optional, but makes it look nice) */
