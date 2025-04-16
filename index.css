@@ -15,3 +15,37 @@ body {
   background-color: wheat;
   text-align: center;
 }
+
+/*LEVEL 1 */
+#level-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.peas {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.onions {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.tomatoes {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.lettuce {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.carrots {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/*LEVEL 2/*
